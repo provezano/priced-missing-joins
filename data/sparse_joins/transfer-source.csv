@@ -1,0 +1,2 @@
+source,pages,distinct,bytes_per_page,trace,reads,sha256
+Sakila,5656,5572,1024,sqlite=3.43.2 pages=5656 page_bytes=1024 queries=12000 returned=12000,9108,88c91a4a1a6b61f9d3f35904c0a173c887b25e73f20c3c2fdb073818c06f4268

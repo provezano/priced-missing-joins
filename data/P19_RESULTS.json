@@ -1,0 +1,321 @@
+{
+  "study": "p19_priced_joins_clean_2026-11-22",
+  "elapsed_seconds": 8.957,
+  "exp1_degree_threshold": {
+    "degree2_random_unaligned_instances": 200,
+    "degree2_fixed_equals_adaptive_rate": 1.0,
+    "degree3_h8_n1278_queries_by_rounds": {
+      "R1_fixed": 256,
+      "R2_two_batches": 46,
+      "R3_three_batches": 21,
+      "R9_sequential_adaptive": 9,
+      "fixed_to_adaptive_ratio": 28.4444
+    }
+  },
+  "exp2_core_reduction": {
+    "random_instances": 224,
+    "exact_price_agreement_rate": 1.0,
+    "stretched_selector_scaling": {
+      "0": {
+        "n_rows": 18,
+        "branch_rows": 7,
+        "representative_probes": 18,
+        "fixed_cost": 22,
+        "adaptive_cost": 10,
+        "median_ms": 3.377
+      },
+      "1": {
+        "n_rows": 43,
+        "branch_rows": 7,
+        "representative_probes": 28,
+        "fixed_cost": 12,
+        "adaptive_cost": 7,
+        "median_ms": 8.912
+      },
+      "8": {
+        "n_rows": 218,
+        "branch_rows": 7,
+        "representative_probes": 28,
+        "fixed_cost": 4,
+        "adaptive_cost": 3,
+        "median_ms": 9.223
+      },
+      "64": {
+        "n_rows": 1618,
+        "branch_rows": 7,
+        "representative_probes": 28,
+        "fixed_cost": 4,
+        "adaptive_cost": 3,
+        "median_ms": 12.384
+      },
+      "256": {
+        "n_rows": 6418,
+        "branch_rows": 7,
+        "representative_probes": 28,
+        "fixed_cost": 4,
+        "adaptive_cost": 3,
+        "median_ms": 23.135
+      }
+    }
+  },
+  "exp3_sqlite_manifests": {
+    "databases": {
+      "Chinook": {
+        "pages": 246,
+        "distinct_pages": 246,
+        "page_bytes": 4096,
+        "panels": 41,
+        "total_vfs_reads": 3750,
+        "sha256": "7651ba378ac2fcd0dfc3c66fb101f7a7eed3ba39a612ec642b96e20702061f15",
+        "trace": "sqlite=3.43.2 pages=246 page_bytes=4096 queries=12000 returned=12000"
+      },
+      "Northwind": {
+        "pages": 6031,
+        "distinct_pages": 6029,
+        "page_bytes": 4096,
+        "panels": 120,
+        "total_vfs_reads": 11962,
+        "sha256": "2f4f5c68dfcd33ba27373eae48c7a4869800c68095ee0f9f0da494f83382a877",
+        "trace": "sqlite=3.43.2 pages=6031 page_bytes=4096 queries=12000 returned=10330"
+      },
+      "Sakila": {
+        "pages": 5656,
+        "distinct_pages": 5572,
+        "page_bytes": 1024,
+        "total_vfs_reads": 9108,
+        "sha256": "88c91a4a1a6b61f9d3f35904c0a173c887b25e73f20c3c2fdb073818c06f4268",
+        "trace": "sqlite=3.43.2 pages=5656 page_bytes=1024 queries=12000 returned=12000"
+      }
+    },
+    "chinook_northwind_mixed1_161_panels": {
+      "fixed_worst_sum": 332,
+      "adaptive_worst_sum": 326,
+      "priority_preads": 294,
+      "bayes_preads": 290,
+      "strict_adv_panels": 6
+    },
+    "chinook_northwind_161_panels_by_manifest": {
+      "row_distributed_6b": {
+        "panels": 161,
+        "settled_on_receipt": 9,
+        "preads": 284,
+        "total_bytes": 1163425
+      },
+      "joint_salted_xor_6b": {
+        "panels": 161,
+        "settled_on_receipt": 6,
+        "preads": 247,
+        "total_bytes": 1011873
+      },
+      "row_distributed_12b": {
+        "panels": 161,
+        "settled_on_receipt": 81,
+        "preads": 98,
+        "total_bytes": 401730
+      },
+      "joint_salted_xor_12b": {
+        "panels": 161,
+        "settled_on_receipt": 139,
+        "preads": 22,
+        "total_bytes": 90434
+      },
+      "row_distributed_24b": {
+        "panels": 161,
+        "settled_on_receipt": 151,
+        "preads": 10,
+        "total_bytes": 41443
+      },
+      "joint_salted_xor_24b": {
+        "panels": 161,
+        "settled_on_receipt": 161,
+        "preads": 0,
+        "total_bytes": 483
+      }
+    },
+    "sakila_8seed_replication": {
+      "n6": {
+        "n6_row_distributed_6b": {
+          "informative_pairs": 168,
+          "ambiguous_pairs": 168,
+          "total_colliders": 4356
+        },
+        "n6_joint_salted_xor_6b": {
+          "informative_pairs": 168,
+          "ambiguous_pairs": 168,
+          "total_colliders": 1762
+        },
+        "n6_row_distributed_12b": {
+          "informative_pairs": 168,
+          "ambiguous_pairs": 98,
+          "total_colliders": 315
+        },
+        "n6_joint_salted_xor_12b": {
+          "informative_pairs": 168,
+          "ambiguous_pairs": 25,
+          "total_colliders": 25
+        },
+        "n6_row_distributed_24b": {
+          "informative_pairs": 168,
+          "ambiguous_pairs": 8,
+          "total_colliders": 8
+        },
+        "n6_joint_salted_xor_24b": {
+          "informative_pairs": 168,
+          "ambiguous_pairs": 0,
+          "total_colliders": 0
+        }
+      },
+      "n8": {
+        "n8_row_distributed_6b": {
+          "informative_pairs": 184,
+          "ambiguous_pairs": 183,
+          "total_colliders": 237082
+        },
+        "n8_joint_salted_xor_6b": {
+          "informative_pairs": 184,
+          "ambiguous_pairs": 184,
+          "total_colliders": 111553
+        },
+        "n8_row_distributed_12b": {
+          "informative_pairs": 184,
+          "ambiguous_pairs": 181,
+          "total_colliders": 10766
+        },
+        "n8_joint_salted_xor_12b": {
+          "informative_pairs": 184,
+          "ambiguous_pairs": 184,
+          "total_colliders": 1732
+        },
+        "n8_row_distributed_24b": {
+          "informative_pairs": 184,
+          "ambiguous_pairs": 60,
+          "total_colliders": 96
+        },
+        "n8_joint_salted_xor_24b": {
+          "informative_pairs": 184,
+          "ambiguous_pairs": 1,
+          "total_colliders": 1
+        }
+      }
+    }
+  },
+  "exp4_gf2_fourier": {
+    "scaling_rows": [
+      {
+        "method": "parity_1bit_o_n3",
+        "n_or_cycles": 8,
+        "bits": 1,
+        "metric_primary": -308.0,
+        "metric_secondary": -327.0,
+        "median_ms": 0.18
+      },
+      {
+        "method": "parity_1bit_o_n3",
+        "n_or_cycles": 16,
+        "bits": 1,
+        "metric_primary": -634.0,
+        "metric_secondary": -635.0,
+        "median_ms": 0.45
+      },
+      {
+        "method": "parity_1bit_o_n3",
+        "n_or_cycles": 32,
+        "bits": 1,
+        "metric_primary": -1455.0,
+        "metric_secondary": -1454.0,
+        "median_ms": 1.721
+      },
+      {
+        "method": "parity_1bit_o_n3",
+        "n_or_cycles": 64,
+        "bits": 1,
+        "metric_primary": -3078.0,
+        "metric_secondary": -3078.0,
+        "median_ms": 9.819
+      },
+      {
+        "method": "parity_1bit_o_n3",
+        "n_or_cycles": 128,
+        "bits": 1,
+        "metric_primary": -6303.0,
+        "metric_secondary": -6302.0,
+        "median_ms": 44.808
+      },
+      {
+        "method": "signature_extrema_dp_2b",
+        "n_or_cycles": 40,
+        "bits": 4,
+        "metric_primary": -34,
+        "metric_secondary": 77,
+        "median_ms": 0.112
+      },
+      {
+        "method": "gf2_fourier_constancy_poly",
+        "n_or_cycles": 40,
+        "bits": 4,
+        "metric_primary": 42.0,
+        "metric_secondary": 402.0,
+        "median_ms": 0.042
+      },
+      {
+        "method": "signature_extrema_dp_2b",
+        "n_or_cycles": 100,
+        "bits": 8,
+        "metric_primary": -129,
+        "metric_secondary": 129,
+        "median_ms": 4.285
+      },
+      {
+        "method": "gf2_fourier_constancy_poly",
+        "n_or_cycles": 100,
+        "bits": 8,
+        "metric_primary": 0.0,
+        "metric_secondary": 922.0,
+        "median_ms": 0.125
+      },
+      {
+        "method": "signature_extrema_dp_2b",
+        "n_or_cycles": 200,
+        "bits": 12,
+        "metric_primary": -264,
+        "metric_secondary": 279,
+        "median_ms": 182.132
+      },
+      {
+        "method": "gf2_fourier_constancy_poly",
+        "n_or_cycles": 200,
+        "bits": 12,
+        "metric_primary": 15.0,
+        "metric_secondary": 1969.0,
+        "median_ms": 0.362
+      },
+      {
+        "method": "gf2_fourier_constancy_poly",
+        "n_or_cycles": 1000,
+        "bits": 16,
+        "metric_primary": -86.0,
+        "metric_secondary": 10146.0,
+        "median_ms": 2.951
+      }
+    ],
+    "degree2_parity_adaptivity_witness": {
+      "n_rows": 10,
+      "max_row_degree": 2,
+      "max_col_degree": 2,
+      "parity_bits": 2,
+      "compatible_worlds": 8,
+      "fixed_cost": 3,
+      "adaptive_cost": 2,
+      "fixed_plan": [
+        2,
+        4,
+        0
+      ],
+      "adaptive_first_row": 0,
+      "distinct_totals": [
+        0,
+        2
+      ]
+    }
+  }
+}

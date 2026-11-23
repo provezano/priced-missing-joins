@@ -1,0 +1,26 @@
+# Shared publication figure style for ideas-for-research (inspired by figures4papers review 2026-11-16)
+# Guarantees TrueType (Type 42) fonts (zero Type 3), journal column sizing, and clean axes.
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none
+font.family: sans-serif
+font.sans-serif: DejaVu Sans, Helvetica, Arial
+font.size: 8.2
+axes.titlesize: 8.8
+axes.titleweight: bold
+axes.labelsize: 8.2
+xtick.labelsize: 7.6
+ytick.labelsize: 7.8
+legend.fontsize: 7.5
+legend.frameon: False
+axes.linewidth: 0.85
+axes.spines.top: False
+axes.spines.right: False
+xtick.major.width: 0.75
+ytick.major.width: 0.75
+xtick.major.size: 3.0
+ytick.major.size: 3.0
+figure.dpi: 300
+savefig.dpi: 300
+savefig.facecolor: white
+savefig.edgecolor: none
